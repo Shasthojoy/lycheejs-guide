@@ -8,14 +8,14 @@ Support our libre Bot Cloud via BTC [1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2](bitcoin
 
 ## Table of Contents
 
-- The Definition System
- - Definition
- - Environment
+- Engine Core
+ - [Assets](./engine/core/Assets.md)
+ - [Definitions](./engine/core/Definitions.md)
+ - Feature Detection
+ - Environments
  - Sandboxes
  - Serialization
- - Adapters and Tags
- - Feature Detection
-
+ - Fertilizers
 
 - Engine Architecture
  - Core Concept
@@ -30,15 +30,17 @@ Support our libre Bot Cloud via BTC [1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2](bitcoin
  - OS Separation
 
 - Projects and Libraries
- - Overview
+ - Package Format
+ - Filesystem Structure
+ - Software Bot Integrations
 
 - Software Bots
- - Helper
- - Harvester
- - Fertilizer
- - Editor
- - Ranger
- - Strainer
+ - lychee.js Helper
+ - lychee.js Harvester
+ - lychee.js Fertilizer
+ - lychee.js Editor
+ - lychee.js Ranger
+ - lychee.js Strainer
 
 
 
