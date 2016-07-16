@@ -11,6 +11,12 @@ environment serialization. It also has the big advantage that all
 Definitions are drag and drop compatible and require zero glue code
 to be integrated into a lychee.js Library or lychee.js Project.
 
+## Serialization
+
+All Definitions are serializable and have a `serialize()` and `deserialize(blob)`
+method. That means all `attachments` of a Definition are serializable
+[Assets](./Assets.md) and reusable in sandboxed [Environments](./Environments.md).
+
 ## Basic Layout
 
 - `lychee.define('identifier')` returns an instance of `lychee.Definition`
@@ -32,8 +38,8 @@ in an environment's `source` variant.
 Filesystem Structure of a typical Definition:
 
 ```bash
-/projects/example
-  /source                 - Project's source folder
+/projects/example         - Project Root Folder
+  /source
     /ui                   - UI namespace
       Definition.js       - Implementation
   	  Definition.png      - "png" Attachment (Texture instance)
@@ -53,7 +59,8 @@ method and inherits the `render()` method from `lychee.ui.Entity`.
 
 That means lychee.js generally uses Composite Pattern and not ES6
 Classes. The Composite Pattern allows flexible combinations of given
-implementations and the reusage of existing implementations.
+implementations and the efficient reusage of existing implementations
+and their methods, properties and their behaviours.
 
 File Contents of `/source/ui/Definition.js`:
 
