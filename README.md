@@ -8,34 +8,39 @@ Support our libre Bot Cloud via BTC [1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2](bitcoin
 
 ## Table of Contents
 
-- Engine Core
+**Engine Core**
+
  - [Assets](./engine/core/Assets.md)
  - [Definitions](./engine/core/Definitions.md)
  - Feature Detection
  - Feature Prediction
  - [Environments](./engine/core/Environments.md)
- - Sandboxes
  - Serialization
  - Fertilizers
 
-- Engine Architecture
- - Core Concept
- - UI Concept
- - Net Concept
- - AI Concept
+**Engine Architecture**
 
-- Engine Maintenance
+ - Timeline (Loop)
+ - Event Graph
+ - Scene Graph
+ - Network Graph
+ - AI Graph
+
+**Engine Maintenance**
+
  - Updates
  - Releases
  - OS Integration
  - OS Separation
 
-- Projects and Libraries
- - Package Format
+**Projects and Libraries**
+
  - Filesystem Structure
+ - Package Format
  - Software Bot Integrations
 
-- Software Bots
+**Software Bots**
+
  - lychee.js Helper
  - lychee.js Harvester
  - lychee.js Fertilizer

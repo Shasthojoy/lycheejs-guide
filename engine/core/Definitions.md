@@ -11,11 +11,13 @@ environment serialization. It also has the big advantage that all
 Definitions are drag and drop compatible and require zero glue code
 to be integrated into a lychee.js Library or lychee.js Project.
 
+
 ## Serialization
 
 All Definitions are serializable and have a `serialize()` and `deserialize(blob)`
 method. That means all `attachments` of a Definition are serializable
 [Assets](./Assets.md) and reusable in sandboxed [Environments](./Environments.md).
+
 
 ## Basic Layout
 

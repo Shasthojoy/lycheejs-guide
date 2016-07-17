@@ -11,6 +11,14 @@ typically when you build and distribute them, they have only a single
 Environment with the type `build`.
 
 
+## Serialization
+
+All Environments are serializable and have a `serialize()` and
+`deserialize(blob)` method. That means all definitions, settings
+and detected features of the current Environment instance are
+reusable in a sandboxed Environment.
+
+
 ## Environment Types
 
 The `source` type is an Environment that is built from the source
@@ -41,7 +49,7 @@ understand what went wrong and they can chunk the problem into small
 problems and re-simulate it on any peer-side.
 
 
-## Default Environment
+## Basic Concept
 
 Any Environment is cross-platform and cross-portable. Every dependency
 of each Environment can be replaced, as the [Fertilizers](./Fertilizers.md)
