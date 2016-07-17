@@ -23,7 +23,7 @@ follows these rules.
 1. Every Definition is serializable and deserializable.
 2. Every Definition is simulateable everywhere.
 3. Every Definition is namespaced by behaviour.
-4. Every Definition is a freely combinable Composite (that abstracts behaviour) or a referencable Module (that abstracts logic).
+4. Every Definition is a freely combinable Composite or a referencable Module.
 5. Every Entity (Definition + Assets) is plug and play.
 6. Every Layer can optionally add logic to third-party integrations.
 
@@ -33,7 +33,7 @@ follows these rules.
 1. Every instance-based property is recursively mapped via `serialize()` and `deserialize()`.
 2. No platform-specific API allowed outside `/source/platform/<tag>`.
 3. For example, every Definition in `lychee.ui.entity` behaves like a `lychee.ui.Entity`.
-4. Composites are Object instances while Modules are unique instances that are referenced.
+4. Composites abstract behaviour while Modules abstract logic.
 5. Entities have no dependency to third-party static Modules that would introduce glue code.
 6. For example, the layer `app.layer.Box2D` is the abstraction for a third-party `Box2D` engine.
 
