@@ -66,10 +66,25 @@ As every Definition in lychee.js allows flexible Composites, you can export
 projects as `variant` set to `library` and include them to create an A/B
 test or fork to another project.
 
+
+### Active Environments
+
 All running Environments (in their deserialized form) are tracked in the
 globally accessible `lychee.ENVIRONMENTS` constant. Injected Environments
 that were loaded as `build` types are also tracked. This way each and every
 dependency can be simulated, serialized and recreated on every peer-side.
+
+The default Environment (accessible via `lychee.environment`) is used to
+export Definitions automatically to. The `lychee.define()` method in each
+Definition's Implementation will automatically dispatch itself to the
+`environment.define(definition)` method. This way it is possible to have
+multiple definitions with the same identifier for multiple (sandboxed)
+environments for multiple platforms.
+
+When using multiple Environments in parallel, it is heavily recommended to
+sandbox it by setting `sandbox` to `true`. This ensures that nothing on
+the `global` scope will leak out and accidentially influence other
+environments.
 
 
 ## Basic Example
