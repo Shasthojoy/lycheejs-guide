@@ -19,7 +19,7 @@ method. That means all `attachments` of a Definition are serializable
 
 ## Basic Layout
 
-- `lychee.define('identifier')` returns an instance of `lychee.Definition`
+- `lychee.define('identifier')` returns an instance of `lychee.Definition(identifier)` while exporting the Definition to the currently active [Environment](./Environments.md)
 - `.attaches({ name: Asset })` injects Assets as named `attachments`
 - `.requires([ 'dependency' ])` injects requirements
 - `.includes([ 'dependency' ])` injects inclusions (on the Composite's prototype chain)

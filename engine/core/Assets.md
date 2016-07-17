@@ -15,6 +15,7 @@ The core lychee.js Assets are defined as follows:
 - `new Texture(url)` is used for `png`
 - `new Stuff(url)` is used for everything else
 
+
 ## Serialization
 
 Each Asset is automatically cached and intelligently cloned behind the

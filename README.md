@@ -12,7 +12,8 @@ Support our libre Bot Cloud via BTC [1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2](bitcoin
  - [Assets](./engine/core/Assets.md)
  - [Definitions](./engine/core/Definitions.md)
  - Feature Detection
- - Environments
+ - Feature Prediction
+ - [Environments](./engine/core/Environments.md)
  - Sandboxes
  - Serialization
  - Fertilizers
