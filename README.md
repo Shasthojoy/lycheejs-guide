@@ -35,7 +35,7 @@ follows these rules.
 3. For example, every Definition in `lychee.ui.entity` behaves like a `lychee.ui.Entity`.
 4. Composites abstract behaviour while Modules abstract logic.
 5. Entities have no dependency to third-party static Modules that would introduce glue code.
-6. For example, the layer `app.layer.Box2D` is the abstraction for a third-party `Box2D` engine.
+6. For example, the layer `app.box2d.Layer` is the abstraction for a third-party `Box2D` engine.
 
 
 
