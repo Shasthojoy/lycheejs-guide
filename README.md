@@ -5,48 +5,29 @@ brought to you as libre lecture with joy and pride by [Artificial Engineering](h
 Support our libre Bot Cloud via BTC [1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2](bitcoin:1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2?amount=0.5&label=lychee.js%20Support).
 
 
-## Basic Rules
 
-These rules apply to pretty much everything of the whole Engine stack and
-all Projects and Libraries and guarantee best experience for both Humans
-and our Software Bots.
+## Quickstart Guide
 
-If an Exception is made, it is subject for refactoring. So far every single
-worst-case abstraction iteratively progressed into a clean state that
-follows these rules.
+The `/bin/maintenance` folder offers some shell
+scripts that help automate all things around a
+typical lychee.js Engine installation.
 
-
-
-**Rules**
-
-1. Composition Pattern over Inheritance.
-2. Every Definition is serializable and deserializable.
-3. Every Definition is simulateable and reproducible.
-4. Every Definition is namespaced by behaviour.
-5. Every Definition is a freely combinable Composite or a referencable Module.
-6. Every Entity (Definition + Assets) is plug and play.
-7. Every Layer can optionally add logic to third-party integrations.
-
-**Explanations**
-
-1. Every Definition tries to be a freely combineable Composite with zero Dependencies.
-2. Every instance-based property is recursively mapped via `serialize()` and `deserialize()`.
-3. No platform-specific API allowed outside `/source/platform/<tag>`.
-4. For example, every Definition in `lychee.ui.entity` behaves like a `lychee.ui.Entity`.
-5. Composites abstract behaviour while Modules abstract logic.
-6. Entities have no dependency to third-party static Modules that would introduce glue code.
-7. For example, the layer `app.box2d.Layer` is the abstraction for a third-party `Box2D` engine.
+- [Installation](./quickstart/Installation.md)
+- [Tools](./quickstart/Tools.md)
+- [Updates](./quickstart/Updates.md)
+- Tutorials
 
 
 
-## Table of Contents
+## Engine Guide
 
-**Core**
+**Engine Core**
 
 The lychee.js Core consists of the Asset, Definition,
 Package and Environment that allows isomorphic behaviour
 via Feature Detection and Feature Prediction.
 
+- [Code Rules](./engine/core/Code-Rules.md)
 - [Assets](./engine/core/Assets.md)
 - [Definitions](./engine/core/Definitions.md)
 - Feature Detection
@@ -55,7 +36,7 @@ via Feature Detection and Feature Prediction.
 - Serialization
 - Fertilizers
 
-**Engine**
+**Engine Concept**
 
 The lychee.js Engine (app / ui namespace) is the
 underlying architecture for an Application. It also
@@ -74,8 +55,7 @@ platform adapters right out of the box.
 
 The lychee.js Engine can handle both Projects and
 Libraries. All lychee.js Projects can be used as
-Libraries and vice versa, due to the Definitions
-and Environments serialization concept.
+Libraries and vice versa.
 
 - Filesystem Structure
 - Package Format
@@ -86,10 +66,7 @@ and Environments serialization concept.
 
 The lychee.js Software Bots allow easier cultivation
 of lychee.js Projects by offering automation tools
-and solutions, such as runtime compilation and
-packaging and publishing, peer-cloud management,
-automated code validation and refactoring or even
-system-level integrations.
+and solutions.
 
 - lychee.js Helper
 - lychee.js Harvester
@@ -98,17 +75,6 @@ system-level integrations.
 - lychee.js Ranger
 - lychee.js Strainer
 
-**Dev Ops / Maintenance**
-
-The `/bin/maintenance` folder offers some shell
-scripts that help automate all things around a
-typical lychee.js Engine installation.
-
-- Updates
-- Releases
-- OS Integration
-- OS Separation
- 
 
 
 ## License
