@@ -37,3 +37,12 @@ cd /opt/lycheejs;
 ./bin/maintenance/do-update.sh;
 ```
 
+However, if you don't want to update the runtimes and
+only update the lychee.js Engine itself, you can use
+a simple `git pull origin development` in your workflow.
+
+```bash
+# See "Reserved Branches"
+git pull origin development;
+```
+

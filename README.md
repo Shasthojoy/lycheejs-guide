@@ -68,7 +68,8 @@ The lychee.js Software Bots allow easier cultivation
 of lychee.js Projects by offering automation tools
 and solutions.
 
-- lychee.js Helper
+- lychee.js Breeder
+- [lychee.js Helper](./software-bots/lycheejs-helper.md)
 - lychee.js Harvester
 - lychee.js Fertilizer
 - lychee.js Editor
