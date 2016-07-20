@@ -30,7 +30,7 @@ via Feature Detection and Feature Prediction.
 - [Code Rules](./engine/core/Code-Rules.md)
 - [Assets](./engine/core/Assets.md)
 - [Definitions](./engine/core/Definitions.md)
-- Feature Detection
+- [Feature Detection](./engine/core/Feature-Detection.md)
 - Feature Prediction
 - [Environments](./engine/core/Environments.md)
 - Serialization
