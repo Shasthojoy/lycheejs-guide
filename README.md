@@ -1,3 +1,4 @@
+
 # lychee.js Guide
 
 brought to you as libre lecture with joy and pride by [Artificial Engineering](http://artificial.engineering).
@@ -15,7 +16,7 @@ typical lychee.js Engine installation.
 - [Installation](./quickstart/Installation.md)
 - [Tools](./quickstart/Tools.md)
 - [Updates](./quickstart/Updates.md)
-- Tutorials
+- [Tutorials](./tutorials)
 
 
 
