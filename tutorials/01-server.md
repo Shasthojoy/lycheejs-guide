@@ -1,9 +1,9 @@
 
 # Create a Server
 
-This tutorial will explain you how to create a Server that
+This tutorial will explain how to create a Server that
 uses the `node` platform stack with the `lychee.net.Server`
-that you can use server-side (or client-side).
+that can run server-side (or client-side).
 
 
 ## Prerequisites
@@ -56,7 +56,7 @@ This makes it possible to publish an isolated lychee.js
 Project to other servers that have no lychee.js Engine (or
 Harvester) installed.
 
-Here's how our Filesystem Structure looks like:
+Here is how our Filesystem Structure looks like:
 
 ```
 /projects/tutorial
@@ -168,7 +168,7 @@ only has the `app.net.remote.Ping` service, but it will now be
 extended with a custom network service.
 
 
-## Create a Network Service
+## Create the Network Service
 
 The `app.net.remote.Chat` service we are going to build will
 inherit from the `lychee.net.remote.Chat` Composite, because
@@ -213,13 +213,13 @@ lychee.define('app.net.remote.Chat').includes([
 ```
 
 
-## Integrate a Network Service
+## Integrate the Network Service
 
 Now that the `app.net.remote.Chat` service is ready
 for use, it is possible to integrate it with the
 `source/net/Server.js` Definition.
 
-The following steps are required for you to do:
+The following steps are required to do so:
 
 1. Add the `app.net.remote.Chat` to the requirements.
 2. Import the `app.net.remote.Chat` to `_Chat` variable.

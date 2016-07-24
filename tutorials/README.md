@@ -14,7 +14,7 @@ fully compatible with the `lycheejs-breeder` workflow.
 ## Index
 
 1.  [Create a Server](./01-server.md)
-2.  Create a Client
+2.  [Create a Client](./02-client.md)
 3.  Basic Debugging
 4.  Integrate a Background
 5.  Modify the UI Graph
