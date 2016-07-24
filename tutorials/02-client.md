@@ -143,5 +143,5 @@ service.hello('Hello World!');
 Now open up the `Network Tab` of the Dev Tools and inspect
 the last (WebSocket) connection to see what has been sent.
 
-![browser](./01-client/asset/browser.png)
+![browser](./02-client/asset/browser.png)
 
