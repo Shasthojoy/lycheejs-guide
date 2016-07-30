@@ -8,7 +8,7 @@ fully compatible with the `lycheejs-breeder` workflow.
 ## Prerequisites
 
 - You should have installed the lychee.js Engine already.
-- You should know the `git` command syntax, how to `git diff` and how to `git checkout`.
+- You should know the `git` command syntax, how to use `git diff` and `git checkout`.
 
 
 ## Index
@@ -16,16 +16,18 @@ fully compatible with the `lycheejs-breeder` workflow.
 1.  [Create a Server](./01-server.md)
 2.  [Create a Client](./02-client.md)
 3.  Basic Debugging
-4.  Integrate a Background
-5.  Modify the UI Graph
-6.  Integrate a Sprite
-7.  Integrate a UI Entity
-8.  Integrate UI Events
-9.  Integrate a Chat Services
-10. Integrate UI Effects
-11. Integrate an AI
-12. Serialize and Debug your Project
-13. Fertilize your Project
+4.  [Basic Scene Graph](./04-scene-graph.md)
+5.  Basic Event Graph
+6.  Integrate a Background
+7.  Integrate a Sprite
+8.  Integrate a UI Entity
+9.  Integrate a UI Event
+10. Integrate a UI Effect
+11. Integrate a Network Service
+12. Integrate a Network Event
+13. Integrate an AI
+14. Serialize your Project
+15. Fertilize your Project
 
 
 ## Workflow
@@ -40,30 +42,38 @@ code state when the equivalent Tutorial was completed.
 You can use `git diff` or similar tools to figure out
 what went wrong or what needs to be changed to succeed.
 
+
+## Usage
+
 Each time you start with a lychee.js Tutorial, you can
 also start it by copying the files from the previous
 Tutorial, so that everything is completely in sync.
 
-For example, if you want to directly start with the
-`02-client` Tutorial, you can do the following:
+Each Tutorial folder in this Guide contains the complete
+incremental progress that you need in order to compare
+it to your own progress (using `git diff`) or to start
+the next Tutorial directly.
+
+If you want to directly start with the `02-client`
+Tutorial, you can start by merging the data of the
+`01-server` Tutorial:
 
 ```bash
 cd /opt/lycheejs;
 
-mkdir ./projects/temporary;
 
-cd ./projects/temporary;
-
-
-# Initialize a new Project
+# Initialize the Tutorial Project
+mkdir ./projects/tutorial;
+cd ./projects/tutorial;
 lycheejs-breeder init;
 
-# Merge files from previous Tutorial
-# In our case this was "01-server"
+
+# Merge progress of previous Tutorial
 cp -R /path/to/lycheejs-guide/tutorials/01-server/* ./;
 
+
 #
-# Follow instructions of the Tutorial now
+# Follow instructions of current Tutorial now
 #
 ```
 
