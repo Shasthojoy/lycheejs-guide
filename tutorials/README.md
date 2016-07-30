@@ -16,8 +16,8 @@ fully compatible with the `lycheejs-breeder` workflow.
 1.  [Create a Server](./01-server.md)
 2.  [Create a Client](./02-client.md)
 3.  Basic Debugging
-4.  [Basic Scene Graph](./04-scene-graph.md)
-5.  Basic Event Graph
+4.  [Scene Graph](./04-scene-graph.md)
+5.  [Event Graph](./05-event-graph.md)
 6.  Integrate a Background
 7.  Integrate a Sprite
 8.  Integrate a UI Entity

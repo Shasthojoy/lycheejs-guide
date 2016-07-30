@@ -8,8 +8,8 @@ that can run client-side (or server-side).
 
 ## Prerequisites
 
-You should have completed the [Create a Server](./01-server.md)
-Tutorial.
+- You should have completed the [Create a Server](./01-server.md)
+  Tutorial.
 
 
 ## Create the Network Service
