@@ -14,6 +14,7 @@ scripts that help automate all things around a
 typical lychee.js Engine installation.
 
 - [Installation](./quickstart/Installation.md)
+- [Troubleshooting](./quickstart/Troubleshooting.md)
 - [Tools](./quickstart/Tools.md)
 - [Updates](./quickstart/Updates.md)
 - [Tutorials](./tutorials)
