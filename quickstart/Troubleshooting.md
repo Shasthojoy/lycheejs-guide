@@ -82,7 +82,7 @@ correctly.
 - Forgot to modify the profile in `./bin/harvester/<profile>.json`.
 
 
-## Bootup Problems - Reinstallation
+## Reinstallation
 
 If you have made no important uncommited changes in the `/opt/lycheejs/projects`
 or `/opt/lycheejs/libraries` folder, you can always achieve a completely
