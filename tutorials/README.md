@@ -27,7 +27,7 @@ fully compatible with the `lycheejs-breeder` workflow.
 12. Integrate a Network Event
 13. Integrate an AI
 14. Serialize your Project
-15. Fertilize your Project
+15. [Fertilize a Project](./15-fertilizer.md)
 
 
 ## Workflow

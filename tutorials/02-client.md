@@ -105,7 +105,7 @@ In both cases the server acts as a so-called `Turtle Router`
 if a connected client is hidden behind a Firewall or NAT.
 
 
-## Debugging the Client
+## Debugg the Client
 
 By default, the `index.html` of each project uses the
 `lychee.pkginit()` method in order to use the package.
