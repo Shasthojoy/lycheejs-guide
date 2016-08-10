@@ -23,22 +23,33 @@ typical lychee.js Engine installation.
 
 ## Engine Guide
 
-**Engine Core**
+**Engine Concept**
 
 The lychee.js Core consists of the Asset, Definition,
 Package and Environment that allows isomorphic behaviour
 via Feature Detection and Feature Prediction.
 
-- [Code Rules](./engine/core/Code-Rules.md)
-- [Assets](./engine/core/Assets.md)
-- [Definitions](./engine/core/Definitions.md)
-- [Feature Detection](./engine/core/Feature-Detection.md)
+- [Code Rules](./engine-concept/Code-Rules.md)
+- [Assets](./engine-concept/Assets.md)
+- [Definitions](./engine-concept/Definitions.md)
+- [Feature Detection](./engine-concept/Feature-Detection.md)
 - Feature Prediction
-- [Environments](./engine/core/Environments.md)
+- [Environments](./engine-concept/Environments.md)
 - Serialization
 - Fertilizers
 
-**Engine Concept**
+**Project Architecture**
+
+The lychee.js Engine can handle both Projects and
+Libraries. All lychee.js Projects can be used as
+Libraries and vice versa.
+
+- [Package Format](./project-architecture/Package-Format.md)
+- Project Structure
+- Build System Integrations
+- Software Bot Integrations
+
+**Engine Architecture**
 
 The lychee.js Engine (app / ui namespace) is the
 underlying architecture for an Application. It also
@@ -52,17 +63,6 @@ platform adapters right out of the box.
 - Scene Graph
 - Network Graph
 - AI Graph
-
-**Projects and Libraries**
-
-The lychee.js Engine can handle both Projects and
-Libraries. All lychee.js Projects can be used as
-Libraries and vice versa.
-
-- Filesystem Structure
-- Package Format
-- Build System Integrations
-- Software Bot Integrations
 
 **Software Bots**
 
