@@ -16,8 +16,8 @@ the [lychee.js Harvester](../software-bots/lycheejs-harvester.md).
 Each top-level identifier of the Package Structure
 reflects the same top-level subfolders of the Project.
 
-That means e.g. all files and their contents in the
-`/source` folder are reflected in `lychee.pkg/source`.
+That means e.g. all files and their contents in the `/source`
+folder are reflected in `lychee.pkg/source/files`.
 
 ```javascript
 {
@@ -43,7 +43,8 @@ That means e.g. all files and their contents in the
 }
 ```
 
-**/environments**
+
+## Package Environments (/environments)
 
 The `environments/<identifier>` Map represents all
 environments that are automatically fertilized by the
@@ -94,7 +95,7 @@ with the `html-nwjs` runtime:
 ```
 
 
-**/files**
+## Package Files (/files)
 
 The `files` Map represents all files of the Project
 or Library.
@@ -160,7 +161,7 @@ case for the `html` platform.
 ```
 
 
-**/tags**
+## Package Tags (/tags)
 
 The `tags` Map represent all platform-specific
 implementations that will only work for a single
