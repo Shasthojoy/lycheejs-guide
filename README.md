@@ -6,7 +6,6 @@ brought to you as libre lecture with joy and pride by [Artificial Engineering](h
 Support our libre Bot Cloud via BTC [1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2](bitcoin:1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2?amount=0.5&label=lychee.js%20Support).
 
 
-
 ## Quickstart Guide
 
 The `/bin/maintenance` folder offers some shell
@@ -20,10 +19,7 @@ typical lychee.js Engine installation.
 - [Tutorials](./tutorials)
 
 
-
-## Engine Guide
-
-**Engine Concept**
+## Engine Concept
 
 The lychee.js Core consists of the Asset, Definition,
 Package and Environment that allows isomorphic behaviour
@@ -38,25 +34,28 @@ via Feature Detection and Feature Prediction.
 - Serialization
 - Fertilizers
 
-**Project Architecture**
+
+## Project Architecture
 
 The lychee.js Engine can handle both Projects and
 Libraries. All lychee.js Projects can be used as
 Libraries and vice versa.
 
 - [Package Format](./project-architecture/Package-Format.md)
-- Project Structure
-- Build System Integrations
-- Software Bot Integrations
+- [Project Files](./project-architecture/Project-Files.md)
+- [MAIN Architecture](./project-architecture/MAIN.md)
+- Third-Party Libraries
+- Build System Integration
+- Software Bot Integration
 
-**Engine Architecture**
+
+## Engine Architecture
 
 The lychee.js Engine (app / ui namespace) is the
 underlying architecture for an Application. It also
 offers default behaviours and integrations with all
 platform adapters right out of the box.
 
-- MAIN Architecture
 - Fertilizer Adapters
 - Timeline Graph
 - Event Graph
@@ -64,7 +63,8 @@ platform adapters right out of the box.
 - Network Graph
 - AI Graph
 
-**Software Bots**
+
+## Software Bots
 
 The lychee.js Software Bots allow easier cultivation
 of lychee.js Projects by offering automation tools
@@ -77,7 +77,6 @@ and solutions.
 - lychee.js Editor
 - lychee.js Ranger
 - lychee.js Strainer
-
 
 
 ## License

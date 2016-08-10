@@ -40,13 +40,14 @@ in an environment's `source` variant.
 Filesystem Structure of a typical Definition:
 
 ```bash
-/projects/example         - Project Root Folder
-  /source
-    /ui                   - UI namespace
-      Definition.js       - Implementation
-  	  Definition.png      - "png" Attachment (Texture instance)
-  	  Definition.fnt      - "fnt" Attachment (Font instance)
-  	  Definition.name.png - "name.png" Attachment (Texture instance)
+/projects/example               - Project Root Folder
+	/source
+		/ui                     - UI namespace
+			Definition.js       - Implementation
+			Definition.fnt      - "fnt" Attachment (Font instance)
+			Definition.json     - "json" Attachment (Config instance)
+			Definition.png      - "png" Attachment (Texture instance)
+			Definition.name.png - "name.png" Attachment (Texture instance)
 ```
 
 Inside the implementation, all attachments with the same prefixing

@@ -60,6 +60,11 @@ It is recommended that all platform-specific build
 identifiers follow the name scheme `platform/target`
 to allow further automation.
 
+Everything that runs on a client-side can be simulated
+both on client-side and server-side, so remember that
+by default all projects are simulated in all platforms
+supported by lychee.js.
+
 This example creates an `application` build of the
 `app.Main` build target that is automatically packaged
 with the `html-nwjs` runtime:
