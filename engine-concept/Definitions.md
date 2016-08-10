@@ -42,12 +42,12 @@ Filesystem Structure of a typical Definition:
 ```bash
 /projects/example               - Project Root Folder
 	/source
-		/ui                     - UI namespace
-			Definition.js       - Implementation
-			Definition.fnt      - "fnt" Attachment (Font instance)
-			Definition.json     - "json" Attachment (Config instance)
-			Definition.png      - "png" Attachment (Texture instance)
-			Definition.name.png - "name.png" Attachment (Texture instance)
+		/ui                     - app.ui Namespace
+			Definition.js       - app.ui.Definition Implementation
+			Definition.fnt      - attachments["fnt"] (Font instance)
+			Definition.json     - attachments["json"] (Config instance)
+			Definition.png      - attachments["png"] (Texture instance)
+			Definition.name.png - attachments["name.png"] (Texture instance)
 ```
 
 Inside the implementation, all attachments with the same prefixing
