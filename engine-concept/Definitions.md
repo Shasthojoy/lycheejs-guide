@@ -76,12 +76,12 @@ lychee.define('app.ui.Definition').requires([
 	variant: 'example'
 }).exports(function(lychee, global, attachments) {
 
-	var _Entity = lychee.import('lychee.ui.Entity');
-	var _Layer  = lychee.import('lychee.ui.Layer');
+	const _Entity = lychee.import('lychee.ui.Entity');
+	const _Layer  = lychee.import('lychee.ui.Layer');
 
-	var _config  = attachments["name.json"]; // instanceof Config
-	var _texture = attachments["png"];       // instanceof Texture
-	var _font    = attachments["fnt"];       // instanceof Font
+	const _CONFIG  = attachments["name.json"]; // instanceof Config
+	const _TEXTURE = attachments["png"];       // instanceof Texture
+	const _FONT    = attachments["fnt"];       // instanceof Font
 
 
 
@@ -89,9 +89,9 @@ lychee.define('app.ui.Definition').requires([
 	 * IMPLEMENTATION
 	 */
 
-	var Composite = function(data) {
+	let Composite = function(data) {
 	
-		var settings = Object.assign({}, data);
+		let settings = Object.assign({}, data);
 
 
 		this.custom = null; // default value for Object instances

@@ -123,7 +123,7 @@ manually transfer additional settings to your `app.Main` instance.
 ```javascript
 (function(lychee, global) {
 
-	var env = new lychee.Environment({
+	let env = new lychee.Environment({
 		build:    'app.Main',
 		type:     'source',
 		packages: [ new lychee.Package('app', './lychee.pkg') ],

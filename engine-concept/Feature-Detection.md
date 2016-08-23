@@ -81,7 +81,8 @@ lychee.define('app.Renderer').includes([
 
 }).exports(function(lychee, global, attachments) {
 
-	var _document = global.document;
+	const _document = global.document;
+	const _Renderer = lychee.import('lychee.Renderer');
 
 
 
@@ -89,13 +90,16 @@ lychee.define('app.Renderer').includes([
 	 * IMPLEMENTATION
 	 */
 
-	var Composite = function(data) {
+	let Composite = function(data) {
 
-		var settings = Object.assign({}, data);
+		let settings = Object.assign({}, data);
 
 
 		this.__canvas  = _document.createElement('canvas');
 		this.__context = this.__canvas.getContext('2d');
+
+
+		_Renderer.call(this, settings);
 
 		settings = null;
 

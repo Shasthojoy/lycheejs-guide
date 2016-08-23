@@ -47,8 +47,8 @@ a new Asset type is associated for a file extension, this helper will use
 the new Asset constructor automatically behind the scenes.
 
 ```javascript
-var asset_a = new lychee.Asset('/path/to/texture.png');
-var asset_b = new Texture('/path/to/texture.png');
+let asset_a = new lychee.Asset('/path/to/texture.png');
+let asset_b = new Texture('/path/to/texture.png');
 
 asset_a instanceof Texture;  // true
 asset_b instanceof Texture;  // true
@@ -58,7 +58,7 @@ asset_a === asset_b;         // false, asset_b is a clone of asset_a
 asset_a.serialize();         // { "constructor": "Texture", "blob": { "buffer": "data:image/png;base64,..." }}
 
 
-var asset_c = lychee.deserialize(asset_a.serialize());
+let asset_c = lychee.deserialize(asset_a.serialize());
 
 asset_c instanceof Texture;  // true
 asset_c.url === asset_a.url; // true

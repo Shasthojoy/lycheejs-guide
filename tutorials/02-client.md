@@ -29,7 +29,7 @@ lychee.define('app.net.client.Chat').includes([
 	'lychee.net.client.Chat'
 ]).exports(function(lychee, global, attachments) {
 
-	var _Chat = lychee.import('lychee.net.client.Chat');
+	const _Chat = lychee.import('lychee.net.client.Chat');
 
 
 
@@ -37,7 +37,7 @@ lychee.define('app.net.client.Chat').includes([
 	 * IMPLEMENTATION
 	 */
 
-	var Composite = function(client) {
+	let Composite = function(client) {
 
 		_Chat.call(this, 'chat', client, {
 			room: 'hello-world',
@@ -135,7 +135,7 @@ other active peers (try more than one Browser in parallel):
 
 
 ```javascript
-var service = lychee.environment.global.MAIN.client.getService('chat');
+let service = lychee.environment.global.MAIN.client.getService('chat');
 
 service.hello('Hello World!');
 ```

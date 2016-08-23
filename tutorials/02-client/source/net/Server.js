@@ -6,9 +6,9 @@ lychee.define('app.net.Server').requires([
 	'lychee.net.Server'
 ]).exports(function(lychee, global, attachments) {
 
-	var _Chat   = lychee.import('app.net.remote.Chat');
-	var _Ping   = lychee.import('app.net.remote.Ping');
-	var _Server = lychee.import('lychee.net.Server');
+	const _Chat   = lychee.import('app.net.remote.Chat');
+	const _Ping   = lychee.import('app.net.remote.Ping');
+	const _Server = lychee.import('lychee.net.Server');
 
 
 
@@ -16,9 +16,9 @@ lychee.define('app.net.Server').requires([
 	 * IMPLEMENTATION
 	 */
 
-	var Composite = function(data) {
+	let Composite = function(data) {
 
-		var settings = Object.assign({
+		let settings = Object.assign({
 		}, data);
 
 
@@ -61,7 +61,7 @@ lychee.define('app.net.Server').requires([
 
 		serialize: function() {
 
-			var data = _Server.prototype.serialize.call(this);
+			let data = _Server.prototype.serialize.call(this);
 			data['constructor'] = 'app.net.Server';
 
 

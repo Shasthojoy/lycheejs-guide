@@ -3,7 +3,7 @@ lychee.define('app.net.client.Chat').includes([
 	'lychee.net.client.Chat'
 ]).exports(function(lychee, global, attachments) {
 
-	var _Chat = lychee.import('lychee.net.client.Chat');
+	const _Chat = lychee.import('lychee.net.client.Chat');
 
 
 
@@ -11,7 +11,7 @@ lychee.define('app.net.client.Chat').includes([
 	 * IMPLEMENTATION
 	 */
 
-	var Composite = function(client) {
+	let Composite = function(client) {
 
 		_Chat.call(this, 'chat', client, {
 			room: 'hello-world',

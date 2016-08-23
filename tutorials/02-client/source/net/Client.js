@@ -6,9 +6,9 @@ lychee.define('app.net.Client').requires([
 	'lychee.net.Client'
 ]).exports(function(lychee, global, attachments) {
 
-	var _Chat   = lychee.import('app.net.client.Chat');
-	var _Client = lychee.import('lychee.net.Client');
-	var _Ping   = lychee.import('app.net.client.Ping');
+	const _Chat   = lychee.import('app.net.client.Chat');
+	const _Client = lychee.import('lychee.net.Client');
+	const _Ping   = lychee.import('app.net.client.Ping');
 
 
 
@@ -16,9 +16,9 @@ lychee.define('app.net.Client').requires([
 	 * IMPLEMENTATION
 	 */
 
-	var Composite = function(data) {
+	let Composite = function(data) {
 
-		var settings = Object.assign({
+		let settings = Object.assign({
 			reconnect: 10000
 		}, data);
 
@@ -68,7 +68,7 @@ lychee.define('app.net.Client').requires([
 
 		serialize: function() {
 
-			var data = _Client.prototype.serialize.call(this);
+			let data = _Client.prototype.serialize.call(this);
 			data['constructor'] = 'app.net.Client';
 
 

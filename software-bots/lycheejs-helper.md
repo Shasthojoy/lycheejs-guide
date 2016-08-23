@@ -68,10 +68,8 @@ Here's the `node` Fertilizer example for a quick 'n dirty
 #!/usr/local/bin/lycheejs-helper env:node
 
 
-var _root = '/opt/lycheejs';
-
-require(_root + '/libraries/lychee/build/node/core.js')(__dirname);
-require(_root + '/libraries/lychee/build/node/dist/index.js');
+require('/opt/lycheejs/libraries/lychee/build/node/core.js')(__dirname);
+require('/opt/lycheejs/libraries/lychee/build/node/dist/index.js');
 
 
 (function(lychee, global) {
@@ -86,9 +84,9 @@ require(_root + '/libraries/lychee/build/node/dist/index.js');
 
 	setTimeout(function() {
 
-		var _Server = lychee.import('lychee.net.Server');
-		var _JSON   = lychee.import('lychee.codec.JSON');
-		var server  = new _Server({
+		let _Server = lychee.import('lychee.net.Server');
+		let _JSON   = lychee.import('lychee.codec.JSON');
+		let server  = new _Server({
 			codec: _JSON,
 //			host:  'localhost',
 			port:  1337,
@@ -122,13 +120,19 @@ Here's the `html` Fertilizer example for a quick 'n dirty
 <script>
 (function(lychee, global) {
 
+    console.log(lychee.ROOT.lychee);
+	console.log(lychee.ROOT.project);
+
+
 	lychee.inject(lychee.ENVIRONMENTS['/libraries/lychee/dist']);
+	lychee.environment.setDebug(true);
+
 
 	setTimeout(function() {
 
-		var _Client = lychee.import('lychee.net.Client');
-		var _JSON   = lychee.import('lychee.codec.JSON');
-		var client  = new _Client({
+		let _Client = lychee.import('lychee.net.Client');
+		let _JSON   = lychee.import('lychee.codec.JSON');
+		let client  = new _Client({
 			codec: _JSON,
 			host:  'localhost',
 			port:  1337,
