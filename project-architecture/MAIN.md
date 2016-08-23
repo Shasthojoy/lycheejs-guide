@@ -13,3 +13,5 @@ code into Libraries to have reusable
 Definitions that can be reused among
 multiple Projects.
 
+![Architecture Overview](./asset/architecture.png)
+
