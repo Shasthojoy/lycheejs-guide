@@ -59,7 +59,7 @@ a centralized `app.Main` instance.
 ## Harvester Integration (harvester.js)
 
 The [lychee.js Harvester](../software-bots/lycheejs-harvester.md)
-starts the `harvester.js` that extens the project
+starts the `harvester.js` that extends the project
 with features like live-updates, auto-fertilization
 fuzz-testing, apidoc-generation and automatic
 stash and storage synchronization across peers.
