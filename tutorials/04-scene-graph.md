@@ -109,9 +109,14 @@ The `lychee.app.State` and `lychee.ui.State` both offer a
 `queryLayer(id, query)` API that allows flexible queries
 on each Entity.
 
-You can easily use that Query API to debug how Entities and
-Layers are constructed and what kind of properties influence
+You can easily use that queryLayer API to inspect how Layers
+and Entities are constructed and what properties influence
 their behaviours.
+
+Remember, every Entity is serializable any time and has a
+`serialize()` method that returns a Serialization Object
+with all information that is required to clone its state
+representation _and_ behaviour.
 
 Possible Query Identifiers:
 
@@ -119,14 +124,15 @@ Possible Query Identifiers:
 - Identifier (`String` id that was used in `setEntity(id, entity)`)
 - Internal Identifier (`String` id that is prefixed with an `@`)
 
-In the Browser console, you can do something like this to
-inspect an Entity in the Scene Graph:
+In the Browser console or node-inspector, you can do something
+like this to inspect an Entity in the Scene Graph:
 
 ```javascript
 let main   = lychee.environment.global.MAIN;
 let entity = main.state.queryLayer('ui', 'menu > @select');
 
 console.log(entity);
+console.log(entity.serialize());
 ```
 
 
