@@ -61,7 +61,7 @@ override the defaults in the `/source/app/Main.js` file.
 These are the optional Platform Adapters:
 
 - `(lychee.app.Jukebox) MAIN.jukebox` - a Sound and Music player for queued and parallel playbacks
-- `(lychee.app.Loop) MAIN.loop` - an event-firing App Loop that simulates, interpolates and predicts update and render flow
+- `(lychee.app.Loop) MAIN.loop` - an event-firing Loop that simulates, interpolates and predicts update and render flow
 - `(lychee.net.Client) MAIN.client` - a peer-to-peer Client for Websockets, HTTP and TCP
 - `(lychee.net.Server) MAIN.server` - a peer-to-peer Server for Websockets, HTTP and TCP
 
