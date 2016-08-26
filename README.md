@@ -75,7 +75,7 @@ and solutions.
 - lychee.js Harvester
 - lychee.js Fertilizer
 - lychee.js Editor
-- lychee.js Ranger
+- [lychee.js Ranger](./software-bots/lycheejs-ranger.md)
 - lychee.js Strainer
 
 
