@@ -136,6 +136,29 @@ console.log(entity.serialize());
 ```
 
 
+## App States
+
+Each `lychee.app.State` and `lychee.ui.State` instance has
+its own Scene Graph, that means all visible and non-visible
+Layers and Entities are structured in `App States`.
+
+The Serialization concept in lychee.js has a more effective
+representation of the Scene Graph by offering a `deserialize(blob)`
+API for each App State.
+
+This `deserialize()` method is called by default with the
+`attachments["json"]` of each App State, meaning that the
+`/source/state/Welcome.json` represents all Layers and Entities
+that are initially contained in the `/source/state/Welcome.js`
+and the `MAIN.setState('welcome')` call.
+
+Every App State has an `enter(oncomplete)` and `leave(oncomplete)`
+method that is called when the MAIN changes its App State. By
+default these enter/leave methods will bind/unbind every event
+listeners that are relevant for User Interaction, meaning that
+only active App States can be interacted with by the User.
+
+
 ## Flexible Customization
 
 The lychee.js Scene Graphs allows a very flexible integration
