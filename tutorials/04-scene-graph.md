@@ -103,6 +103,33 @@ integrated with the `lychee.math` stack, so it has support
 for `gravity` and `friction`.
 
 
+## Scene Graph Queries
+
+The `lychee.app.State` and `lychee.ui.State` both offer a 
+`queryLayer(id, query)` API that allows flexible queries
+on each Entity.
+
+You can easily use that Query API to debug how Entities and
+Layers are constructed and what kind of properties influence
+their behaviours.
+
+Possible Query Identifiers:
+
+- Index (`Number` index in the `entities[]` Array)
+- Identifier (`String` id that was used in `setEntity(id, entity)`)
+- Internal Identifier (`String` id that is prefixed with an `@`)
+
+In the Browser console, you can do something like this to
+inspect an Entity in the Scene Graph:
+
+```javascript
+let main   = lychee.environment.global.MAIN;
+let entity = main.state.queryLayer('ui', 'menu > @select');
+
+console.log(entity);
+```
+
+
 ## Flexible Customization
 
 The lychee.js Scene Graphs allows a very flexible integration
