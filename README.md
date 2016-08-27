@@ -73,7 +73,7 @@ and solutions.
 - lychee.js Breeder
 - [lychee.js Helper](./software-bots/lycheejs-helper.md)
 - lychee.js Harvester
-- lychee.js Fertilizer
+- [lychee.js Fertilizer](./software-bots/lycheejs-fertilizer.md)
 - lychee.js Editor
 - [lychee.js Ranger](./software-bots/lycheejs-ranger.md)
 - lychee.js Strainer

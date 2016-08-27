@@ -14,12 +14,8 @@ The lychee.js Helper is a bash script, so the
 `lycheejs-helper` command needs to be executed within
 the Terminal (a bash session).
 
-When given no arguments, it will show you an overview
-and examples on specific use cases.
-
-
-
-
+When given no arguments, the bash script will show
+an overview and examples on specific use cases.
 
 The typical use cases for the `lycheejs-helper` are:
 
@@ -27,23 +23,28 @@ The typical use cases for the `lycheejs-helper` are:
 - `lycheejs://` protocol interaction
 - `start`, `stop`, `file` and `edit` project interaction
 - `cmd`, `web` for CLI and Browser interaction
-- `env:<fertilizer>` to execute code in a specific environment
+- `env:<platform>` to execute code in a specific environment
 
 It has several use cases, such as the `lycheejs://`
 protocol interaction, `boot`ing and `unboot`ing
-of the `lycheejs-harvester`, 
-You can use it, for example, to quickly write
-tests or prototypes with the lychee.js APIs
-without having to create a full-blown project.
+of the `lycheejs-harvester`, and integration with
+the project's or library's filesystem.
+
+The `env:<platform>` feature is made for prototypical
+usage and quick n' dirty demos that can be built in a
+single file with lychee.js without having to have a full
+Project structure.
 
 
-## Environment Interaction (`env:Platform`)
+## Environment Interaction (`env:platform` and `which:platform`)
 
-You can use the lychee.js Helper for Rapid Prototyping
-purposes. If you want to play around with an API without
-wanting to have all the lychee.js Engine Definition
-overhead, you can simply create a JS file and let the
-helper execute it in the target environment.
+The lychee.js Helper can be used for Rapid Prototyping
+purposes. It is possible to play around with an API
+without having to have a lychee.js Project structure.
+
+A single JS file can be directly executed in the target
+environment using either a shebang (`#!/usr/bin/lycheejs-helper env:node`)
+or the bash (`lycheejs-helper env:node file.js`).
 
 ```bash
 # Reports the Path to a specific Runtime
