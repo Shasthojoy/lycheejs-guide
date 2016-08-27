@@ -25,3 +25,29 @@ For security reasons, the Harvester only listens on
 `localhost` on the management port `4848`, so that
 no public access is possible.
 
+
+## Project Management
+
+The lychee.js Ranger allows to manage all Projects
+and Libraries.
+
+The Welcome State offers common functionalities.
+
+- `open` Button opens the Project in the [lychee.js Editor](./lycheejs-editor.md).
+- `folder` Button opens the Project in the File Manager.
+- `start/stop` starts and stops the Project server (`harvester.js` file).
+- `web` Buttons open the Web Browser at different Web Hosts (`ipv4` and `ipv6`).
+
+![lycheejs-ranger-welcome](./asset/lycheejs-ranger-welcome.png)
+
+
+## Profile Management
+
+The Profile State offers a simple way to edit the [lychee.js Harvester](./lycheejs-harvester.md)
+profiles on the currently connected remote server.
+
+By default, the lychee.js Harvester offers three Profiles where
+`development` and `production` are the defaulted ones.
+
+![lycheejs-ranger-profile](./asset/lycheejs-ranger-profile.png)
+
