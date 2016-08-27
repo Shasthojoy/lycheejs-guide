@@ -185,6 +185,6 @@ and the Web Browser.
 lycheejs-helper cmd=lycheejs-ranger?data='{"foo":"bar"}'
 
 # Starts the Web Browser
-lycheejs-helper web https://lychee.js.org;
+lycheejs-helper web=https://lychee.js.org;
 ```
 
