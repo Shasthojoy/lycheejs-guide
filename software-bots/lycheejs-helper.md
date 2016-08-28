@@ -182,9 +182,11 @@ and the Web Browser.
 
 ```bash
 # Starts the lycheejs-ranger with a JSON file
-lycheejs-helper cmd=lycheejs-ranger?data='{"foo":"bar"}'
+lycheejs-helper "lycheejs://cmd=lycheejs-ranger?data="$(echo '{"foo":"bar"}' | base64);
+lycheejs-helper cmd "lycheejs-ranger?data="$(echo '{"foo":"bar"}' | base64);
 
 # Starts the Web Browser
-lycheejs-helper web=https://lychee.js.org;
+lycheejs-helper lycheejs://web=https://lychee.js.org;
+lycheejs-helper web https://lychee.js.org;
 ```
 
