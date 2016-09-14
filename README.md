@@ -16,6 +16,7 @@ typical lychee.js Engine installation.
 - [Troubleshooting](./quickstart/Troubleshooting.md)
 - [Tools](./quickstart/Tools.md)
 - [Updates](./quickstart/Updates.md)
+- [Filesystem](./quickstart/Filesystem.md)
 - [Tutorials](./tutorials)
 
 
