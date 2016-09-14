@@ -1,14 +1,16 @@
 
 # Filesystem
 
-The lychee.js Engine is installed at `/opt/lycheejs`.
-
-All Software Bots assume two different folder structures
-that are observed and integrated with the rest of the Engine:
+The lychee.js Engine is installed at `/opt/lycheejs`,
+its folder structure looks like this:
 
 - `/opt/lycheejs/bin/*` for Binaries and Helper Scripts.
 - `/opt/lycheejs/libraries/*` for lychee.js Libraries.
 - `/opt/lycheejs/projects/*` for lychee.js Projects.
+
+As the lychee.js Engine can compile and package itself,
+there's no other external folder that is relevant to
+the Engine.
 
 By default the `.gitignore` file does only explicitely
 track the upstream-maintained core Libraries and core
