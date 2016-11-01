@@ -49,5 +49,7 @@ profiles on the currently connected remote server.
 By default, the lychee.js Harvester offers three Profiles where
 `development` and `production` are the defaulted ones.
 
+All profiles are in sync with the lychee.js Harvester's [Profiles](./lycheejs-harvester.md#profiles).
+
 ![lycheejs-ranger-profile](./asset/lycheejs-ranger-profile.png)
 
