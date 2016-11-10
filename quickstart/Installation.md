@@ -1,35 +1,11 @@
 
 # Installation
 
-The lychee.js project is distributed via different channels,
-there are separate ways on how to install it.
+The lychee.js project is distributed via 3 different channels:
 
-The recommended, failsafe way is to use our lychee.js Engine
-Net Installer.
-
-All lychee.js Engine and Bundle installations include the git
-repository, so that you can get updates anytime via
-`git pull origin development` or by using the [Updates](./Updates.md)
-helper that eases up the selection of the update channel.
-
-
-
-## lychee.js Bundle Installation (not recommended)
-
-The lychee.js Bundles are prebuilt bundles that include everything
-you otherwise would have installed later in a lychee.js Engine setup.
-Imagine them as ISO images that are ready to go.
-
-You can download the lychee.js Bundles in the releases section of the
-[lychee.js Bundle](https://github.com/Artificial-Engineering/lycheejs-bundle/releases)
-repository.
-
-If you want to rebuilt them yourself for easier installation in your
-own server cloud, you can easily generate them yourself. Please read
-the [README](https://github.com/Artificial-Engineering/lycheejs-bundle/blob/master/README.md)
-of the lychee.js Bundle repository for instructions.
-
-
+- Library (portable, for prototyping.The versaitle swiss army lychee)
+- Engine (the real deal, with ai automation and whatnot. runs on any platform)
+- Bundle (prebuilt, not recommended)
 
 ## lychee.js Library Installation
 
@@ -39,7 +15,9 @@ with the software bots nor the lychee.js Engine itself.
 It exists for the purpose of reusing your lychee.js Projects and
 Libraries in other Projects (like in an HTML5 App or a Node.js Server).
 
-If the lychee.js Library caught your interest; Please read the
+If the lychee.js Library caught your interest; 
+
+Please read the
 [README](https://github.com/Artificial-Engineering/lycheejs-library/blob/master/README.md)
 of the lychee.js Library repository for instructions.
 
@@ -47,9 +25,16 @@ However, keep in mind that integration of the lychee.js tools are
 pointless outside the lychee.js Engine world, so you have no
 advantages of our software bots.
 
-
+The recommended, failsafe way is to use our lychee.js Engine
+Net Installer.
 
 ## lychee.js Engine Installation (recommended)
+
+All lychee.js Engine and Bundle installations include the git
+repository, so that you can get updates anytime via
+`git pull origin development` or by using the [Updates](./Updates.md)
+helper that eases up the selection of the update channel.
+
 
 The Net Installer shell script allows to automatically install
 the lychee.js Engine on any UNIX-compatible machine (arm, x86 or
@@ -140,4 +125,20 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64";
 # On OSX
 export JAVA_HOME=$(/usr/libexec/java_home);
 ```
+
+
+## lychee.js Bundle Installation (not recommended)
+
+The lychee.js Bundles are prebuilt bundles that include everything
+you otherwise would have installed later in a lychee.js Engine setup.
+Imagine them as ISO images that are ready to go.
+
+You can download the lychee.js Bundles in the releases section of the
+[lychee.js Bundle](https://github.com/Artificial-Engineering/lycheejs-bundle/releases)
+repository.
+
+If you want to rebuilt them yourself for easier installation in your
+own server cloud, you can easily generate them yourself. Please read
+the [README](https://github.com/Artificial-Engineering/lycheejs-bundle/blob/master/README.md)
+of the lychee.js Bundle repository for instructions.
 
