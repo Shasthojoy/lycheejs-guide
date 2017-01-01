@@ -6,6 +6,12 @@ brought to you as libre lecture with joy and pride by [Artificial Engineering](h
 Support our libre Bot Cloud via BTC [1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2](bitcoin:1CamMuvrFU1QAMebPoDsL3JrioVDoxezY2?amount=0.5&label=lychee.js%20Support).
 
 
+## FAQ
+
+Frequently asked questions are answered in the
+[FAQ.md](./FAQ.md) file.
+
+
 ## Quickstart Guide
 
 The `/bin/maintenance` folder offers some shell

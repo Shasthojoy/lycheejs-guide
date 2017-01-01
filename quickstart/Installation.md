@@ -3,9 +3,11 @@
 
 The lychee.js project is distributed via 3 different channels:
 
-- Library (portable, for prototyping.The versaitle swiss army lychee)
-- Engine (the real deal, with ai automation and whatnot. runs on any platform)
-- Bundle (prebuilt, not recommended)
+- Library (portable, for prototyping. The versatile swiss army lychee)
+- Engine (real deal, with AI automation and whatnot. Runs on every platform)
+- Bundles (prebuilt, for lazy sysadmins)
+
+
 
 ## lychee.js Library Installation
 
@@ -15,18 +17,41 @@ with the software bots nor the lychee.js Engine itself.
 It exists for the purpose of reusing your lychee.js Projects and
 Libraries in other Projects (like in an HTML5 App or a Node.js Server).
 
-If the lychee.js Library caught your interest; 
-
-Please read the
+If the lychee.js Library caught your interest;  Please read the
 [README](https://github.com/Artificial-Engineering/lycheejs-library/blob/master/README.md)
 of the lychee.js Library repository for instructions.
 
 However, keep in mind that integration of the lychee.js tools are
 pointless outside the lychee.js Engine world, so you have no
-advantages of our software bots.
+advantages of our software bots and neither an AI support for
+most things.
 
 The recommended, failsafe way is to use our lychee.js Engine
 Net Installer.
+
+
+
+**Installation using Bower**
+
+```javascript
+cd /path/to/your/project;
+
+# This will install lychee.js to ./bower_components/lycheejs
+bower install lycheejs;
+```
+
+
+
+**Installation using NPM**
+
+```javascript
+cd /path/to/your/project;
+
+# This will install lychee.js to ./node_modules/lycheejs
+npm install lycheejs;
+```
+
+
 
 ## lychee.js Engine Installation (recommended)
 
@@ -42,7 +67,7 @@ amd64). The only requirements beforehand are working `bash`,
 `curl` and `git`.
 
 ```bash
-# This will clone lycheejs into /opt/lycheejs
+# This will install lycheejs into /opt/lycheejs
 
 sudo bash -c "$(curl -fsSL https://lychee.js.org/install.sh)";
 ```
@@ -131,7 +156,10 @@ export JAVA_HOME=$(/usr/libexec/java_home);
 
 The lychee.js Bundles are prebuilt bundles that include everything
 you otherwise would have installed later in a lychee.js Engine setup.
-Imagine them as ISO images that are ready to go.
+
+Imagine them as ISO images that are ready to go. They are future-proof
+and can be updated using the same [Updates](../Updates.md) procedure
+as a lychee.js Engine installation.
 
 You can download the lychee.js Bundles in the releases section of the
 [lychee.js Bundle](https://github.com/Artificial-Engineering/lycheejs-bundle/releases)
@@ -142,3 +170,13 @@ own server cloud, you can easily generate them yourself. Please read
 the [README](https://github.com/Artificial-Engineering/lycheejs-bundle/blob/master/README.md)
 of the lychee.js Bundle repository for instructions.
 
+The Generic Bundles work on all operating systems. The Generic Mini
+Bundle has only `node` platform support, but will run on very low-powered
+systems like a Raspberry Pi.
+
+These are the necessary steps to install the `Generic Bundle` variants:
+
+- Extract zip file to `/opt/lycheejs`.
+- Execute `sudo ./bin/maintenance/do-install.sh`.
+- Execute `sudo ./bin/configure.sh`.
+- Follow the [Quickstart Instructions](https://github.com/Artificial-Engineering/lycheejs#quickstart).
