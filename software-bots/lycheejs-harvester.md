@@ -30,6 +30,8 @@ lycheejs-harvester stop;              # stop
 lycheejs-harvester start development --sandbox; # start in sandbox mode
 ```
 
+![lycheejs-harvester-start](./asset/lycheejs-harvester-start.png)
+
 
 ### Actions
 
