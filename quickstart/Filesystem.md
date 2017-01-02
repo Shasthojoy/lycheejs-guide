@@ -21,6 +21,24 @@ and an own git repository for each lychee.js Library
 or Project that is not part of the lychee.js Engine already.
 
 
+## Libraries and Projects
+
+All projects and libraries can be tracked by `git` using
+a simple `git init` call inside their folder. By default,
+the `/opt/lycheejs/.gitignore` file only tracks the official
+example projects of the upstream lychee.js Engine.
+
+```bash
+cd /opt/lycheejs;
+
+mkdir -p ./projects/my-project;
+cd ./projects/my-project;
+
+lycheejs-breeder init;
+
+git init;
+```
+
 
 ## Third-party Libraries and Projects
 
