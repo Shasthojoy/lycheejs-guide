@@ -21,6 +21,8 @@ The lychee.js Harvester can be started in the Terminal (bash)
 via the `lycheejs-harvester` command.
 
 ```bash
+cd /opt/lycheejs;
+
 lycheejs-harvester; # show help
 
 lycheejs-harvester start development; # start development profile
