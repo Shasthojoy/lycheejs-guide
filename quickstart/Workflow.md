@@ -9,7 +9,7 @@ The workflow can be split up in these major phases:
 
 1. Breeding (`init` a project, `pull` a library)
 2. Developing (modify a project)
-3. Fixing (`check`, `stash` a project)
+3. Fixing (`check`, `stage` a project)
 4. Fertilizing (`configure`, `build`, `package` a project)
 5. Publishing (`push` a project)
 

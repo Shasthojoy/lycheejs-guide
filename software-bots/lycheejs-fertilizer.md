@@ -54,6 +54,22 @@ approach is that everything can be integrated
 intelligently with other tools.
 
 
+## Example Usage
+
+The lychee.js Fertilizer is best used in `auto` mode
+as this will build all other environments set up in the
+`build/environments` section of the `lychee.pkg` file.
+
+```bash
+cd /opt/lycheejs;
+
+cd ./projects/my-project;
+lycheejs-fertilizer auto /projects/my-project;
+```
+
+![lycheejs-fertilizer-auto](../quickstart/asset/lycheejs-fertilizer-auto.png)
+
+
 ## Package Integration
 
 The lychee.js Fertilizer will parse all environments
@@ -72,6 +88,70 @@ lycheejs-fertilizer auto /projects/boilerplate;
 
 # Fertilize the lychee.js Library with ALL Platform Adapters
 lycheejs-fertilizer auto /libraries/lychee;
+```
+
+All successful builds will be stored in each project's
+or library's `./build` folder. The sub structure of
+the folder is `./build/<platform>/<identifier>`, so
+it's e.g. `./build/html-nwjs/main` in our example.
+
+The `build` folder **MUST NOT** be tracked in git.
+It contains binary builds and no manually modified
+source code.
+
+
+## Example Environment
+
+The `lychee.pkg` file by default has already all
+important build identifiers setup (as has the
+`/projects/boilerplate`).
+
+The important thing to know here is that the
+`./build/environments/<identifier>` object is
+*identical* to the `lychee.Environment(settings)`.
+
+If you want to have multiple builds with multiple
+configurations of your project, use the `profile`
+setting to change configurations and modify them
+directly in the `lychee.pkg` file.
+
+This example will clear things up on how to
+achieve custom configurations of builds:
+
+```json
+{
+	"api": {
+		"files": {}
+	},
+	"build": {
+		"environments": {
+			"html-nwjs/main": {
+				"build": "app.Main",
+				"debug": false,
+				"packages": [
+					[
+						"app",
+						"./lychee.pkg"
+					]
+				],
+				"sandbox": false,
+				"tags": {
+					"platform": [
+						"html-nwjs",
+						"html"
+					]
+				},
+				"variant": "application",
+				"profile": {
+					"client": "/api/server/connect?identifier=/projects/my-project",
+					"server": "/api/server/connect?identifier=/projects/my-project"
+				}
+			}
+		}
+	},
+	"source": {
+	}
+}
 ```
 
 
