@@ -84,7 +84,7 @@ and solutions.
 - [lychee.js Fertilizer](./software-bots/lycheejs-fertilizer.md)
 - lychee.js Editor
 - [lychee.js Ranger](./software-bots/lycheejs-ranger.md)
-- lychee.js Strainer
+- [lychee.js Strainer](./software-bots/lycheejs-strainer.md)
 
 
 ## License

@@ -17,6 +17,17 @@ The workflow and how it is used is explained in the
 The lychee.js Breeder can be started in the Terminal (bash)
 via the `lycheejs-breeder` command.
 
+The `init` action will create a new Project or Library using
+the Boilerplate. This new Project is then already fully
+integrated into the lychee.js Engine stack, including
+peer-to-peer networking support and serialization and
+sandboxing features.
+
+The `pull` action will isolate a Library into the Project's
+`./libraries` folder so that you can distribute external
+dependencies with your Project - e.g. for deployment on
+static web servers.
+
 ```bash
 cd /opt/lycheejs;
 
