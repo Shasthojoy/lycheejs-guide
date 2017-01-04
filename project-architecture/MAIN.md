@@ -76,3 +76,112 @@ These are the required Platform Adapters:
 Remember, all Adapter Instances are also accessible in each
 App State with the identical property name as in the MAIN.
 
+
+## Example app.Main Definition
+
+```javascript
+lychee.define('app.Main').requires([
+	'app.state.Welcome'
+]).includes([
+	'lychee.app.Main'
+]).exports(function(lychee, global, attachments) {
+
+	const _app  = lychee.import('app');
+	const _Main = lychee.import('lychee.app.Main');
+
+
+
+	/*
+	 * IMPLEMENTATION
+	 */
+
+	let Composite = function(data) {
+
+		let settings = Object.assign({
+			input: {
+				delay:       0,
+				key:         true,
+				keymodifier: false,
+				scroll:      true,
+				touch:       true,
+				swipe:       true
+			},
+			jukebox: {
+				music: true,
+				sound: true
+			},
+			client: {
+				host: 'example.com',
+				port: 1337
+			},
+			server: null, // XXX: disabled lychee.net.Server
+			renderer: {
+				id:     'app',
+				width:  null,
+				height: null
+			},
+			viewport: {
+				fullscreen: false
+			}
+
+		}, data);
+
+
+		_Main.call(this, settings);
+
+
+
+		/*
+		 * INITIALIZATION
+		 */
+
+		this.bind('load', function(oncomplete) {
+			oncomplete(true);
+		}, this, true);
+
+		this.bind('init', function() {
+
+			this.setState('welcome', new _app.state.Welcome(this));
+
+			this.changeState('welcome');
+
+		}, this, true);
+
+	};
+
+
+	Composite.prototype = {
+
+		/*
+		 * ENTITY API
+		 */
+
+		// deserialize: function(blob) {},
+
+		serialize: function() {
+
+			let data = _Main.prototype.serialize.call(this);
+			data['constructor'] = 'app.Main';
+
+
+			let settings = data['arguments'][0] || {};
+			let blob     = data['blob'] || {};
+
+			// XXX: Add differences to lychee.app.Main here
+
+			data['arguments'][0] = settings;
+			data['blob']         = Object.keys(blob).length > 0 ? blob : null;
+
+
+			return data;
+
+		}
+
+	};
+
+
+	return Composite;
+
+}); 
+```
+
