@@ -47,6 +47,22 @@ lycheejs-strainer check /projects/my-project; # check a project
 
 ![lycheejs-strainer-check](./asset/lycheejs-strainer-check.png)
 
+The screenshot demonstrates typical errors that occur when
+the Project or Library ignores the lychee.js
+[CODESTYLE Guide](https://github.com/Artificial-Engineering/lycheejs/blob/development/guides/CODESTYLE.md).
+
+In the above case a helper method with the name `setShell(shell)`
+that uses a `typeof` check as suggested in the Codestyle would
+fix the problem.
+
+These hints are automatically parsed in the code, so that the
+Composition aspect of definitions is freely combine-able and
+hash-able by the knowledge graph.
+
+As every Definition ships its own properties in the constructor,
+composition can be done in an automated manner - also for fuzz
+test generation.
+
 
 ## Staging a Project
 
