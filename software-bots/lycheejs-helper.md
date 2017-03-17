@@ -61,39 +61,6 @@ as GNU's `/bin/env` binary. It can be also used for quick
 demos and prototypical development of experiments. You
 don't necessarily need to have a full Project structure.
 
-This is a quick `lychee.net.Server` example that starts
-a `WebSocket (WS13)` server on port `1337`:
-
-```javascript
-#!/usr/local/bin/lycheejs-helper env:node
-
-const _ROOT = '/opt/lycheejs';
-require(_ROOT + '/libraries/lychee/build/node/core.js')(__dirname);
-require(_ROOT + '/libraries/lychee/build/node/dist/index.js');
-
-(function(lychee, global) {
-
-lychee.inject(lychee.ENVIRONMENTS['/libraries/lychee/dist']);
-
-	setTimeout(function() {
-	
-			const _Server = lychee.import('lychee.net.Server');
-	
-			let server = new _Server({
-				host: 'localhost',
-				port: 1337,
-				type: _Server.TYPE.WS
-			});
-	
-			server.bind('connect',    (remote) => console.log('CONNECTED', remote.host + ' : ' + remote.port));
-			server.bind('disconnect', (remote) => console.log('DISCONNECTED', remote.host + ' : ' + remote.port));
-			server.connect();
-	
-	}.bind(this), 200);
-
-})(lychee, typeof global !== 'undefined' ? global : this);
-```
-
 
 ## Environment Interaction (`env:platform` and `which:platform`)
 
