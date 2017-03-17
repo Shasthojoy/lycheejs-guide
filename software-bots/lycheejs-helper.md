@@ -94,20 +94,16 @@ Here's the `node` Fertilizer example for a quick 'n dirty
 ```javascript
 #!/usr/local/bin/lycheejs-helper env:node
 
-
 require('/opt/lycheejs/libraries/lychee/build/node/core.js')(__dirname);
 require('/opt/lycheejs/libraries/lychee/build/node/dist/index.js');
 
-
 (function(lychee, global) {
 
-    console.log(lychee.ROOT.lychee);
+	console.log(lychee.ROOT.lychee);
 	console.log(lychee.ROOT.project);
-
 
 	lychee.inject(lychee.ENVIRONMENTS['/libraries/lychee/dist']);
 	lychee.environment.setDebug(true);
-
 
 	setTimeout(function() {
 
@@ -120,12 +116,7 @@ require('/opt/lycheejs/libraries/lychee/build/node/dist/index.js');
 			type:  _Server.TYPE.WS
 		});
 
-		server.bind('connect', function(remote) {
-
-			console.log('REMOTE CONNECTED', remote.host + ' : ' + remote.port);
-
-		});
-
+		server.bind('connect', (remote) => console.log('CONNECT', remote.host + ' : ' + remote.port));
 		server.connect();
 
 	}.bind(this), 200);
@@ -147,13 +138,11 @@ Here's the `html` Fertilizer example for a quick 'n dirty
 <script>
 (function(lychee, global) {
 
-    console.log(lychee.ROOT.lychee);
+	console.log(lychee.ROOT.lychee);
 	console.log(lychee.ROOT.project);
-
 
 	lychee.inject(lychee.ENVIRONMENTS['/libraries/lychee/dist']);
 	lychee.environment.setDebug(true);
-
 
 	setTimeout(function() {
 
@@ -166,10 +155,7 @@ Here's the `html` Fertilizer example for a quick 'n dirty
 			type:  _Client.TYPE.WS
 		});
 
-		client.bind('connect', function() {
-			console.log('CLIENT CONNECTED');
-		});
-
+		client.bind('connect', _ => console.log('CLIENT CONNECTED'));
 		client.connect();
 
 	}.bind(this), 200);
