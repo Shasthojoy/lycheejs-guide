@@ -26,7 +26,7 @@ only in the `/opt/lycheejs/projects` subfolder in order to
 have all features offered by the lychee.js Engine.
 
 As all tools are cross-dependent, the lychee.js Breeder also
-interacts with the Fertilizer, Strainer, Harvester, Editor,
+interacts with the Fertilizer, Strainer, Harvester, Studio,
 Ranger and all the other tools behind the scenes automagically.
 
 ```bash

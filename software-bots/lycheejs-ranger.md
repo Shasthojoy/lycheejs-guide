@@ -33,7 +33,7 @@ and Libraries.
 
 The Welcome State offers common functionalities.
 
-- `open` Button opens the Project in the [lychee.js Editor](./lycheejs-editor.md).
+- `open` Button opens the Project in [lychee.js Studio](./lycheejs-studio.md).
 - `folder` Button opens the Project in the File Manager.
 - `start/stop` starts and stops the Project server (`harvester.js` file).
 - `web` Buttons open the Web Browser at different Web Hosts (`ipv4` and `ipv6`).

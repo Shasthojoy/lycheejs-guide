@@ -60,9 +60,9 @@ Please read the
 chapter for more information.
 
 
-## lychee.js Editor
+## lychee.js Studio
 
-The lychee.js Editor is the graphical Editor
+The lychee.js Studio is the graphical Editor
 that allows you to modify, clone, create and fork
 Projects or Libraries without having to write
 code.
@@ -73,7 +73,7 @@ integrating Assets or Entities quickly), so it
 is not meant to replace your Code Editor.
 
 Please read the
-[lychee.js Editor](../software-bots/lycheejs-editor.md)
+[lychee.js Studio](../software-bots/lycheejs-studio.md)
 chapter for more information.
 
 

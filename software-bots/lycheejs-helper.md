@@ -8,7 +8,7 @@ features for both application interaction and
 rapid prototyping.
 
 
-## Usage
+## Usage (Actions)
 
 The lychee.js Helper is a bash script, so the
 `lycheejs-helper` command needs to be executed within
@@ -17,23 +17,82 @@ the Terminal (a bash session).
 When given no arguments, the bash script will show
 an overview and examples on specific use cases.
 
-The typical use cases for the `lycheejs-helper` are:
+The typical use cases for the `lycheejs-helper` actions are:
 
-- `boot` and `unboot` of the [lychee.js Harvester](../software-bots/lycheejs-harvester.md).
-- `lycheejs://` protocol interaction
-- `start`, `stop`, `file` and `edit` project interaction
+- `lycheejs://` Protocol interaction
+- `boot` and `unboot` for Harvester Interaction
+- `start`, `stop`, `file` and `edit` for Project interaction
 - `cmd`, `web` for CLI and Browser interaction
+
+Note that all actions can be mapped in the `lycheejs://Action=Resource`
+theme where `action` is the first parameter and `resource`
+is the second parameter in below examples.
+
+This allows projects of the `html` platform to interact
+with the native operating system.
+
+
+## Usage (Helpers)
+
+The typical use cases for the `lycheejs-helper` helpers are:
+
 - `env:<platform>` to execute code in a specific environment
+- `which:<platform>` to return the runtime path for a specific environment
+- `run:<identifier> <Library/Project>` to execute the build variant of a project in a specific environment
 
-It has several use cases, such as the `lycheejs://`
-protocol interaction, `boot`ing and `unboot`ing
-of the `lycheejs-harvester`, and integration with
-the project's or library's filesystem.
+```bash
+# Executes the node binary
+lycheejs-helper env:node;
 
-The `env:<platform>` feature is made for prototypical
-usage and quick n' dirty demos that can be built in a
-single file with lychee.js without having to have a full
-Project structure.
+# Returns the node binary's path
+lycheejs-helper which:node;
+# /opt/lycheejs/bin/runtime/node/linux/x86\_64/node
+
+
+# Run the html-nwjs/main build
+lycheejs-fertilizer html-nwjs/main /projects/boilerplate;
+lycheejs-helper run:html-nwjs/main /projects/boilerplate;
+```
+
+**Shebang Usage**
+
+The `env:<platform>` feature has the identical behaviour
+as GNU's `/bin/env` binary. It can be also used for quick
+demos and prototypical development of experiments. You
+don't necessarily need to have a full Project structure.
+
+This is a quick `lychee.net.Server` example that starts
+a `WebSocket (WS13)` server on port `1337`:
+
+```javascript
+#!/usr/local/bin/lycheejs-helper env:node
+
+const _ROOT = '/opt/lycheejs';
+require(_ROOT + '/libraries/lychee/build/node/core.js')(__dirname);
+require(_ROOT + '/libraries/lychee/build/node/dist/index.js');
+
+(function(lychee, global) {
+
+lychee.inject(lychee.ENVIRONMENTS['/libraries/lychee/dist']);
+
+	setTimeout(function() {
+	
+			const _Server = lychee.import('lychee.net.Server');
+	
+			let server = new _Server({
+				host: 'localhost',
+				port: 1337,
+				type: _Server.TYPE.WS
+			});
+	
+			server.bind('connect',    (remote) => console.log('CONNECTED', remote.host + ' : ' + remote.port));
+			server.bind('disconnect', (remote) => console.log('DISCONNECTED', remote.host + ' : ' + remote.port));
+			server.connect();
+	
+	}.bind(this), 200);
+
+})(lychee, typeof global !== 'undefined' ? global : this);
+```
 
 
 ## Environment Interaction (`env:platform` and `which:platform`)
@@ -153,22 +212,38 @@ Here's the `html` Fertilizer example for a quick 'n dirty
 ```
 
 
+## Harvester Interaction (`boot`, `unboot`)
+
+The lychee.js Helper can boot and unboot the lychee.js
+Harvester with a given Profile. This comes in handy once
+you develop graphical applications that need a running
+lychee.js Harvester instance in the background.
+
+```bash
+# Boots the lychee.js Harvester
+lycheejs-helper boot development;
+
+# Unboots the lychee.js Harvester
+lycheejs-helper unboot;
+```
+
+
 ## Project Interaction (`start`, `stop`, `file`, `edit`)
 
 The lychee.js Helper can interact with the lychee.js
 Projects and Libraries.
 
 ```bash
-# Stops the project server
+# Stops the Project server
 lycheejs-helper stop /projects/boilerplate;
 
-# Starts the project server
+# Starts the Project server
 lycheejs-helper start /projects/boilerplate;
 
 # Opens the File Manager of the OS
 lycheejs-helper file /projects/boilerplate;
 
-# Opens the lychee.js Editor
+# Opens lychee.js Studio
 lycheejs-helper edit /projects/boilerplate;
 ```
 
