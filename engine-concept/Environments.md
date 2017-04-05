@@ -38,7 +38,7 @@ but the exported Environment (`platform` set to `html`) requires it,
 it will be serialized and added to the Environment snapshot. That way
 lychee.js can predict when an Environment can run natively or needs
 to be simulated with mockup APIs. This is an essential feature for
-our Software Bots to help them understand the intension of the code.
+our Software Bots to help them understand the intention of the code.
 
 The `build` type is an Environment snapshot. That means it is
 typically defined in a single file (located in `/build` of the project
@@ -79,7 +79,7 @@ export Definitions automatically to. The `lychee.define()` method in each
 Definition's Implementation will automatically dispatch itself to the
 `environment.define(definition)` method. This way it is possible to have
 multiple definitions with the same identifier for multiple (sandboxed)
-environments for multiple platforms.
+environments for multiple (currently supported or unsupported) platforms.
 
 When using multiple Environments in parallel, it is heavily recommended to
 sandbox it by setting `sandbox` to `true`. This ensures that nothing on
@@ -90,10 +90,11 @@ environments.
 ## Basic Example
 
 The typical usage of an Environment is either by using a `lychee.pkg`
-file or by using a customized Environment instance on-the-fly. In both cases
-the `build` property decides what to build. If the `variant` is set to
-(defaulted) `application`, the `build` target is created with a `new` call
-and gets the `profile` as a parameter.
+file or by using a customized Environment instance on-the-fly.
+
+In both cases the `build` property decides what to build. If the `variant`
+is set to (defaulted) `application`, the `build` target is created with a
+`new` call and receives the `profile` object as its first parameter.
 
 Initializing an Environment with a `lychee.pkg` file uses the
 `lychee.pkginit(identifier, settings, profile)` syntax where `settings` are
@@ -138,7 +139,7 @@ manually transfer additional settings to your `app.Main` instance.
 		}
 	});
 
-	lychee.envinit('html/main', {
+	lychee.envinit(env, {
 		custom: 'stuff' // overrides the environment's profile.custom property
 	});
 
