@@ -59,7 +59,7 @@ Libraries and vice versa.
 
 ## Engine Architecture
 
-The lychee.js Engine (app / ui namespace) is the
+The lychee.js Engine (`/libraries/lychee`) is the
 underlying architecture for an Application. It also
 offers default behaviours and integrations with all
 platform adapters right out of the box.
