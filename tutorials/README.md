@@ -2,32 +2,14 @@
 # Tutorials
 
 The lychee.js Tutorials are all available here. They are
-fully compatible with the `lycheejs-breeder` workflow.
+fully compatible with the workflow of [lychee.js Breeder](../software-bots/lycheejs-breeder.md).
 
 
 ## Prerequisites
 
-- You should have installed the lychee.js Engine already.
+- The lychee.js Engine has to be installed already (into `/opt/lycheejs`).
 - You should know the `git` command syntax, how to use `git diff` and `git checkout`.
-
-
-## Index
-
-1.  [Create a Server](./01-server.md)
-2.  [Create a Client](./02-client.md)
-3.  Basic Debugging
-4.  [Scene Graph](./04-scene-graph.md)
-5.  [Event Graph](./05-event-graph.md)
-6.  Integrate a Background
-7.  Integrate a Sprite
-8.  Integrate a UI Entity
-9.  Integrate a UI Event
-10. Integrate a UI Effect
-11. Integrate a Network Service
-12. Integrate a Network Event
-13. Integrate an AI
-14. Serialize your Project
-15. [Fertilize a Project](./15-fertilizer.md)
+- (Recommended) You should have basic knowledge of `ES2016` to understand things more quickly.
 
 
 ## Workflow
@@ -36,11 +18,18 @@ Every lychee.js Tutorial can be done after one another,
 which means you start with the first, then you can do
 the second, then the third and so on.
 
-Each folder inside the `./tutorial` folder contains the
-code state when the equivalent Tutorial was completed.
+Each folder inside this very `./tutorial` folder contains
+the code state when the equivalent Tutorial was completed.
 
 You can use `git diff` or similar tools to figure out
 what went wrong or what needs to be changed to succeed.
+
+These Tutorials will also focus on giving you a strong
+knowledge about the architecture. So most things are done
+the hard way first, to teach you how things work behind
+the scenes when you use the graphical tools like
+[lychee.js Studio](../software-bots/lycheejs-studio.md) or
+[lychee.js Ranger](../software-bots/lycheejs-ranger.md)
 
 
 ## Usage
@@ -61,19 +50,33 @@ Tutorial, you can start by merging the data of the
 ```bash
 cd /opt/lycheejs;
 
-
 # Initialize the Tutorial Project
 mkdir ./projects/tutorial;
 cd ./projects/tutorial;
 lycheejs-breeder init;
 
-
 # Merge progress of previous Tutorial
 cp -R /path/to/lycheejs-guide/tutorials/01-server/* ./;
 
-
-#
 # Follow instructions of current Tutorial now
-#
 ```
+
+
+## Tutorials
+
+1.  [Create a Server](./01-server.md)
+2.  [Create a Client](./02-client.md)
+3.  Basic Debugging
+4.  [Scene Graph](./04-scene-graph.md)
+5.  [Event Graph](./05-event-graph.md)
+6.  Integrate a Background
+7.  Integrate a Sprite
+8.  Integrate a UI Entity
+9.  Integrate a UI Event
+10. Integrate a UI Effect
+11. Integrate a Network Service
+12. Integrate a Network Event
+13. Integrate an AI
+14. Serialize your Project
+15. [Fertilize a Project](./15-fertilizer.md)
 

@@ -8,7 +8,7 @@ that can run server-side (or client-side).
 
 ## Prerequisites
 
-You should have installed the lychee.js Engine already.
+- The lychee.js Engine has to be installed already (into `/opt/lycheejs`).
 
 
 ## Initialize the Project
@@ -45,50 +45,6 @@ The output of the above commands should look like this:
 ![lycheejs-breeder](./01-server/asset/initialize.png)
 
 
-## Filesystem Structure
-
-As the lychee.js Engine has the `/libraries` and `/projects`
-folders by convention, all projects have also can have an
-(optional) `/libraries` folder where they can snapshot their
-libraries.
-
-This makes it possible to publish an isolated lychee.js
-Project to other servers that have no lychee.js Engine (or
-Harvester) installed.
-
-Here is how our Filesystem Structure looks like:
-
-```
-/projects/tutorial
-+-- /libraries         - isolated libraries
-| +-- /lychee
-|   +-- /build         - isolated builds
-|     +-- /node
-|       +-- dist
-|       | +-- index.js
-|       +-- core.js
-|
-+-- /api               - auto-generated API data and docs
-+-- /asset             - raw assets for build pipeline
-+-- /build             - auto-generated builds
-+-- /source            - source files
-| +-- /net             - app.net namespace
-|   +-- Server.js      - App Server
-|   +-- /remote        - app.net.remote namespace
-|   | +-- Ping.js      - Ping Service (remote)
-|   +-- Client.js      - App Client
-|   +-- /client        - app.net.client namespace
-|   | +-- Ping.js      - Ping Service (client)
-| +-- /state           - app.state namespace
-|   | +-- Welcome.js   - Welcome state
-|   | +-- Welcome.json - Welcome state attachment (scene graph)
-| +-- Main.js          - App Main
-+-- index.html         - source index (in-Browser Development Mode)
-+-- harvester.js       - App Main (server-side)
-+-- lychee.pkg         - Project Package
-```
-
-
 ## Bootup the Project
 
 As you might have noticed, the project automatically has
@@ -116,7 +72,7 @@ The output of the above command should look like this:
 (I) harvester.mod.Server: BOOTUP ("/projects/tutorial | null:49157")
 ```
 
-![lycheejs-harvester](./01-server/asset/harvester.png)
+![lycheejs-harvester](./01-server/asset/bootup.png)
 
 You can stop the lychee.js Harvester by pressing `[Ctrl] + [C]`
 in the Terminal window.
@@ -219,11 +175,74 @@ Now that the `app.net.remote.Chat` service is ready
 for use, it is possible to integrate it with the
 `source/net/Server.js` Definition.
 
-The following steps are required to do so:
+**Connect/Disconnect Basics**
+
+As the whole lychee.js Network stack is built for
+peer-to-peer usage, all clients and remotes can be
+connected and disconnected at anytime.
+
+So it is important to have that in mind when using
+network services and integrating them.
+
+The `lychee.net.Server` has a `connect` and `disconnect`
+event that offers an easy integration on a per-remote
+basis:
+
+```javascript
+let server = new lychee.net.Server({
+	host: null,
+	port: 1337
+});
+
+server.bind('connect', function(remote) {
+	console.log('REMOTE ' + remote.id + ' CONNECTED');
+});
+
+server.bind('disconnect', function(remote) {
+	console.log('REMOTE ' + remote.id + ' DISCONNECTED');
+});
+```
+
+When we add and remove services, we have to keep in mind
+that they are on a per-remote basis. That means we should
+also cleanup and remove the service once the client or
+remote was disconnected.
+
+```javascript
+let service = new _Chat({ room: 'hello-world' });
+
+server.bind('connect', function(remote) {
+	remote.addService(service);
+});
+
+server.bind('disconnect', function(remote) {
+	remote.removeService(service);
+	// alternative: remote.removeServices();
+});
+```
+
+
+**Add a Service to the Server**
+
+The following challenges are now for you to solve inside
+the `source/net/Server.js` file:
 
 1. Add the `app.net.remote.Chat` to the requirements.
-2. Import the `app.net.remote.Chat` to `_Chat` variable.
-3. Add `new _Chat(remote)` service in the `connect` event.
+2. Import the `app.net.remote.Chat` to `_Chat` constant.
+3. Add `new _Chat(remote)` service to the server's `connect` event.
+
+Remember, you can always use `git diff` to see your progress
+compared on what should be done:
+
+```bash
+# I am unsure why it doesnt work
+export TUTORIAL=/path/to/lycheejs-guide/tutorial;
+
+
+cd /opt/lycheejs/projects/tutorial;
+
+git diff $TUTORIAL/01-server/source/net/Server.js ./source/net/Server.js;
+```
 
 
 ## Manage the Project
@@ -242,19 +261,19 @@ Restart the Project Server with the `lycheejs-helper`:
 ```bash
 cd /opt/lycheejs;
 
-lycheejs-helper stop /projects/boilerplate;
-lycheejs-helper start /projects/boilerplate;
+lycheejs-helper stop /projects/tutorial;
+lycheejs-helper start /projects/tutorial;
 ```
 
 The output of the above commands should look like this:
 
 ```bash
-lycheejs-helper stop /projects/boilerplate;
+lycheejs-helper stop /projects/tutorial;
 
-{"message":"Server stopped (\"/projects/boilerplate\")","blob":null}
+{"message":"Server stopped (\"/projects/tutorial\")","blob":null}
 
-lycheejs-helper start /projects/boilerplate;
+lycheejs-helper start /projects/tutorial;
 
-{"message":"Server started (\"/projects/boilerplate\")","blob":null}
+{"message":"Server started (\"/projects/tutorial\")","blob":null}
 ```
 
