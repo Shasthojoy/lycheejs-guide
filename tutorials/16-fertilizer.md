@@ -76,7 +76,7 @@ lycheejs-fertilizer html-nwjs/main /projects/boilerplate;
 If everything works as expected, the output of a typical build
 will look like this:
 
-![fertilizer](./15-fertilizer/asset/fertilizer.png)
+![fertilizer](./16-fertilizer/asset/fertilizer.png)
 
 After you have fertilized your Project, you can directly run
 the native build for your operating system. If you are on a
@@ -88,7 +88,7 @@ on the `html` platform (in the Web Browser) and running on
 the native `nwjs` platform (in the Native Desktop binary)
 looks like:
 
-![browser vs nwjs](./15-fertilizer/asset/browser-vs-nwjs.png)
+![browser vs nwjs](./16-fertilizer/asset/browser-vs-nwjs.png)
 
 
 ## The Fertilizer Procedure
@@ -121,7 +121,7 @@ That allows flexible integration with third-party build
 systems without having to write annoying wrappers for them
 all the time.
 
-An example included in this Tutorial is the [./bin/package.sh](./15-fertilizer/bin/package.sh)
+An example included in this Tutorial is the [./bin/package.sh](./16-fertilizer/bin/package.sh)
 which is borrowed from the Lethal Maze game and will show
 you some examples on how you can package your App.
 

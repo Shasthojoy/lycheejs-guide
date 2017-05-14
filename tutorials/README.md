@@ -67,16 +67,17 @@ cp -R /path/to/lycheejs-guide/tutorials/01-server/* ./;
 1.  [Create a Server](./01-server.md)
 2.  [Create a Client](./02-client.md)
 3.  Basic Debugging
-4.  [Scene Graph](./04-scene-graph.md)
-5.  [Event Graph](./05-event-graph.md)
-6.  Integrate a Background
-7.  Integrate a Sprite
-8.  Integrate a UI Entity
-9.  Integrate a UI Event
-10. Integrate a UI Effect
-11. Integrate a Network Service
-12. Integrate a Network Event
-13. Integrate an AI
-14. Serialize your Project
-15. [Fertilize a Project](./15-fertilizer.md)
+4.  [App States](./04-states.md)
+5.  [Scene Graph](./05-scene-graph.md)
+6.  [Event Graph](./06-event-graph.md)
+7.  Integrate a Background
+8.  Integrate a Sprite
+9.  Integrate a UI Entity
+10. Integrate a UI Event
+11. Integrate a UI Effect
+12. Integrate a Network Service
+13. Integrate a Network Event
+14. Integrate an AI
+15. Serialize your Project
+16. [Fertilize a Project](./16-fertilizer.md)
 
